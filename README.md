@@ -1,12 +1,7 @@
 # Table of Contents
 1. [Problem](README.md#problem)
-2. [Input Dataset](README.md#input-dataset)
-3. [Instructions](README.md#instructions)
-4. [Output](README.md#output)
-5. [Tips on getting an interview](README.md#tips-on-getting-an-interview)
-6. [Instructions to submit your solution](README.md#instructions-to-submit-your-solution)
-7. [FAQ](README.md#faq)
-8. [Questions?](README.md#questions?)
+2. [Approach](README.md#approach)
+3. [Run Instructions](README.md#run-instructions)
 
 # Problem
 
@@ -16,14 +11,14 @@ As a data engineer, you are asked to create a mechanism to analyze past years da
 
 Your code should be modular and reusable for future. If the newspaper gets data for the year 2019 (with the assumption that the necessary data to calculate the metrics are available) and puts it in the `input` directory, running the `run.sh` script should produce the results in the `output` folder without needing to change the code.
 
-# Input Dataset
+# Approach
 
 Raw data could be found [here](https://www.foreignlaborcert.doleta.gov/performancedata.cfm) under the __Disclosure Data__ tab (i.e., files listed in the __Disclosure File__ column with ".xlsx" extension). 
 For your convenience we converted the Excel files into a semicolon separated (";") format and placed them into this Google drive [folder](https://drive.google.com/drive/folders/1Nti6ClUfibsXSQw5PUIWfVGSIrpuwyxf?usp=sharing). However, do not feel limited to test your code on only the files we've provided on the Google drive 
 
 **Note:** Each year of data can have different columns. Check **File Structure** docs before development. 
 
-# Instructions
+# Run Instructions
 
 We designed this coding challenge to assess your coding skills and your understanding of computer science fundamentals. They are both prerequisites of becoming a data engineer. To solve this challenge you might pick a programing language of your choice (preferably Python, Scala, Java, or C/C++ because they are commonly used and will help us better assess you), but you are only allowed to use the default data structures that come with that programming language (you may use I/O and other standard libraries). For example, you can code in Python, **but you should not use Pandas or other external libraries**. 
 
