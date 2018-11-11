@@ -16,7 +16,18 @@ To solve this challenge you might pick a programing language of your choice (pre
 # Approach
 
 To perform the category aggregation and counting in a scalable way for a large amount of data, I broke down the problem into the following pieces:
-1. Raw data could be found [here](https://www.foreignlaborcert.doleta.gov/performancedata.cfm) under the __Disclosure Data__ tab (i.e., files listed in the __Disclosure File__ column with ".xlsx" extension). 
+
+1. Find the right column names for the fields of interest, i.e., what are the column names for case status, work place state, and occupation name for different years. The names vary for different year ranges. By checking through the documentation on the US DOL website, I noticed that there are limited variants for the column names and created global dictionaries to look them up in the header of the input file to pick the right ones. 
+
+2. Find the indices of the column names identified in step 1 in the list of column names.
+
+3. Extract the field values (state and occupation titles) line by line using the indices found in step 2 and add the values and update their numbers in a dictionary.
+
+4. Find the top 10 categories with the largest number of certified h1b visas by sorting the dictionray by values from high to low first, and by the alphabetical order of the keys and then picking out the top 10 records.
+
+5. Write out the top 10 records into a formated text file.
+
+
 For your convenience we converted the Excel files into a semicolon separated (";") format and placed them into this Google drive [folder](https://drive.google.com/drive/folders/1Nti6ClUfibsXSQw5PUIWfVGSIrpuwyxf?usp=sharing). However, do not feel limited to test your code on only the files we've provided on the Google drive 
 
 **Note:** Each year of data can have different columns. Check **File Structure** docs before development. 
