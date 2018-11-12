@@ -30,7 +30,7 @@ To perform the category aggregation and counting in a scalable way for a large a
 
 # Run Instructions
 
-## Structure of the repo
+## Structure of the Code Pipeline
 The directory structure of this repo looks like this:
 ```
       ├── README.md 
@@ -58,6 +58,8 @@ The directory structure of this repo looks like this:
                   |   |   └── top_10_occupations.txt
                   |   |   └── top_10_states.txt
 
+
+## Run the Code
 
 We designed this coding challenge to assess your coding skills and your understanding of computer science fundamentals. They are both prerequisites of becoming a data engineer. To solve this challenge you might pick a programing language of your choice (preferably Python, Scala, Java, or C/C++ because they are commonly used and will help us better assess you), but you are only allowed to use the default data structures that come with that programming language (you may use I/O and other standard libraries). For example, you can code in Python, **but you should not use Pandas or other external libraries**. 
 
