@@ -15,9 +15,9 @@ To solve this challenge you might pick a programing language of your choice (pre
 
 # Approach
 
-To perform the category aggregation and counting in a scalable way for a large amount of data, I broke down the problem into the following pieces:
+To perform the category aggregation and counting in a scalable way for a large amount of data, I broke down the problem into the following steps:
 
-1. Find the right column names for the fields of interest, i.e., what are the column names for case status, work place state, and occupation name for different years. The names vary for different year ranges. By checking through the documentation on the US DOL website, I noticed that there are limited variants for the column names and created global dictionaries to look them up in the header of the input file to pick the right ones. 
+1. Find the right column names for the fields of interest, i.e., what the column names are for case status, work place state, and occupation name for different years. The names vary for different year ranges. By checking through the documentation on the US DOL website, I noticed that there are limited variants for the column names and created global dictionaries to look them up in the header of the input file to pick the right ones. 
 
 2. Find the indices of the column names identified in step 1 in the list of column names.
 
@@ -26,6 +26,8 @@ To perform the category aggregation and counting in a scalable way for a large a
 4. Find the top 10 categories with the largest number of certified h1b visas by sorting the dictionray by values from high to low first, and by the alphabetical order of the keys and then picking out the top 10 records. For the top 10 categories, calculate the percentage for each category.
 
 5. Write out the top 10 records into a formated text file.
+
+Steps 2, 3, and 4 were programmed in a Python function top10_certified to prepare a output-ready table with the top 10 occupations or top 10 states with the most certified H1B visas. Step 5 was programmed in a Python function write_output to deal with the formatting and saving the result in a text file.
 
 
 # Run Instructions
@@ -78,5 +80,4 @@ On success:
 
     [PASS]: test_1
     [Thu Nov 11 16:25:57 PDT 2018] 1 of 1 tests passed
-
 
