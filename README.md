@@ -21,14 +21,43 @@ To perform the category aggregation and counting in a scalable way for a large a
 
 2. Find the indices of the column names identified in step 1 in the list of column names.
 
-3. Extract the field values (state and occupation titles) line by line using the indices found in step 2 and add the values and update their numbers in a dictionary.
+3. Extract the field values (state and occupation titles) line by line using the indices found in step 2 and add the values and update their numbers in a dictionary. So far the fields of interest are set to be either state or occupation. The module is readily to be used for the other fields as well.
 
-4. Find the top 10 categories with the largest number of certified h1b visas by sorting the dictionray by values from high to low first, and by the alphabetical order of the keys and then picking out the top 10 records.
+4. Find the top 10 categories with the largest number of certified h1b visas by sorting the dictionray by values from high to low first, and by the alphabetical order of the keys and then picking out the top 10 records. For the top 10 categories, calculate the percentage for each category.
 
 5. Write out the top 10 records into a formated text file.
 
 
 # Run Instructions
+
+## Structure of the repo
+The directory structure of this repo looks like this:
+```
+      ├── README.md 
+      ├── run.sh
+      ├── src
+      │   └──h1b_counting.py
+      ├── input
+      │   └──h1b_input.csv
+      ├── output
+      |   └── top_10_occupations.txt
+      |   └── top_10_states.txt
+      ├── insight_testsuite
+          └── run_tests.sh
+          └── tests
+              └── test_1
+              |   ├── input
+              |   │   └── h1b_input.csv
+              |   |__ output
+              |   |   └── top_10_occupations.txt
+              |   |   └── top_10_states.txt
+              ├── test_2
+                  ├── input
+                  │   └── h1b_input.csv
+                  |── output
+                  |   |   └── top_10_occupations.txt
+                  |   |   └── top_10_states.txt
+
 
 We designed this coding challenge to assess your coding skills and your understanding of computer science fundamentals. They are both prerequisites of becoming a data engineer. To solve this challenge you might pick a programing language of your choice (preferably Python, Scala, Java, or C/C++ because they are commonly used and will help us better assess you), but you are only allowed to use the default data structures that come with that programming language (you may use I/O and other standard libraries). For example, you can code in Python, **but you should not use Pandas or other external libraries**. 
 
