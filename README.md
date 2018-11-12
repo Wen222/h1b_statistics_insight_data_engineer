@@ -69,14 +69,14 @@ Save or link the input file as ./input/h1b_input.csv and run ./run.sh
 2. Copy or link the input file as h1b_input.csv in the input folder, and place the known output files in the output folder. 
 3. Run the ./insight_testsuite/run_tests.sh script and test results will be displayed on screen.
 
-On a failed test, the output of `run_tests.sh` should look like:
+For example, on a failed test, the output of `run_tests.sh` should look like:
 
     [FAIL]: test_1
-    [Thu Mar 30 16:28:01 PDT 2017] 0 of 1 tests passed
+    [Thu Nov 11 16:28:01 PDT 2018] 0 of 1 tests passed
 
 On success:
 
     [PASS]: test_1
-    [Thu Mar 30 16:25:57 PDT 2017] 1 of 1 tests passed
+    [Thu Nov 11 16:25:57 PDT 2018] 1 of 1 tests passed
 
 
